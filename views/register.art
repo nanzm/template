@@ -1,0 +1,38 @@
+{{ extend './layout.art' }}
+
+{{ block 'head' }}
+<title>首页</title>
+<link rel="stylesheet" href="/css/index.css">
+{{ /block }}
+
+
+{{ block 'body' }}
+{{ include './includes/header.art' }}
+
+
+<form class="form-signin" action="/register" method="post">
+    <h1 class="h3 mb-3 font-weight-normal">注册</h1>
+
+    <label for="inputName" class="sr-only">昵称</label>
+    <input type="text" name="name" id="inputName" class="form-control" placeholder="昵称" autofocus="">
+
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="邮箱">
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">确认</button>
+</form>
+
+
+{{ include './includes/footer.art' }}
+{{ /block }}
+
+{{ block 'script' }}
+<script>
+  $(function () {
+
+  })
+</script>
+{{ /block }}
